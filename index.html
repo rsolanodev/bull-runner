@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#208FE3" />
+    <title>Toro en Fuga</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game"></div>
+
+      <div id="hud" class="hud hidden">
+        <div class="hud-row">
+          <div class="hud-stat">
+            <span class="hud-label">PUNTOS</span>
+            <span id="hud-score" class="hud-value">0</span>
+          </div>
+          <div class="hud-stat">
+            <span class="hud-label">MONEDAS</span>
+            <span id="hud-coins" class="hud-value">0</span>
+          </div>
+          <button id="hud-pause" class="icon-button" type="button" aria-label="Pausa">II</button>
+        </div>
+      </div>
+
+      <div id="screen-menu" class="screen">
+        <div class="panel">
+          <h1 class="title">TORO<span>EN FUGA</span></h1>
+          <p class="subtitle">Corre, salta y esquiva por el pueblo</p>
+          <div class="record-line">
+            RÉCORD <strong id="menu-best">0</strong>
+          </div>
+          <button id="btn-play" class="button primary" type="button">JUGAR</button>
+          <div class="controls">
+            <p><kbd>←</kbd> <kbd>→</kbd> carriles · <kbd>↑</kbd> / <kbd>Espacio</kbd> saltar · <kbd>↓</kbd> agacharse</p>
+            <p>Móvil: desliza para moverte y saltar · toca para saltar</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="screen-pause" class="screen hidden">
+        <div class="panel">
+          <h2 class="title small">PAUSA</h2>
+          <button id="btn-resume" class="button primary" type="button">CONTINUAR</button>
+          <button id="btn-pause-menu" class="button ghost" type="button">VOLVER AL MENÚ</button>
+        </div>
+      </div>
+
+      <div id="screen-gameover" class="screen hidden">
+        <div class="panel">
+          <h2 class="title small">¡TE PILLARON!</h2>
+          <div class="results">
+            <div class="result-row"><span>PUNTOS</span><strong id="go-score">0</strong></div>
+            <div class="result-row"><span>MONEDAS</span><strong id="go-coins">0</strong></div>
+            <div class="result-row"><span>RÉCORD</span><strong id="go-best">0</strong></div>
+          </div>
+          <p id="go-new" class="new-record hidden">¡NUEVO RÉCORD!</p>
+          <button id="btn-restart" class="button primary" type="button">REINTENTAR</button>
+          <button id="btn-go-menu" class="button ghost" type="button">MENÚ</button>
+        </div>
+      </div>
+
+      <div id="rotate-hint" class="hidden">Gira el dispositivo para jugar mejor</div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
